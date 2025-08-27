@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Appointment Landing Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    height: 28vh;
+    text-align: center;
+    background-color: #ffdd99;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .title {
+    font-size: 6vw;
+    font-style: italic;
+    font-weight: 900;
+    transition: font-size 0.5s ease;
+  }
+
+  .appointment {
+    font-size: 4vw;
+    color: black;
+    opacity: 0;
+    animation: slideIn 2s forwards;
+    animation-delay: 0.5s;
+    transition: font-size 0.5s ease;
+  }
+
+  .content {
+    margin-top: 32vh;
+    padding: 20px;
+  }
+
+  .content h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 80px;
+    padding: 40px;
+  }
+
+  .ui-card {
+    background: radial-gradient(#111 50%, #000 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-out;
+  }
+
+  .ui-card img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+  }
+
+  .ui-card:hover img {
+    transform: scale(1.0) translateY(-20px);
+    opacity: 0.3;
+  }
+
+  .ui-card .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    
+    transition: all 0.3s ease-out;
+  }
+
+  .ui-card .description h3 {
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0 0 20px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+
+  .ui-card .description p {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease-out 0.2s;
+  }
+
+  .ui-card .description a {
+    color: #fff;
+    background: #34aff3;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease-out 0.4s;
+  }
+
+  .ui-card .description a:hover {
+    background: #0a83c5;
+  }
+
+  .ui-card:hover .description h3,
+  .ui-card:hover .description p,
+  .ui-card:hover .description a {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .small {
+    font-size: 31vw !important;
+  }
+
+  .appointment.small {
+    font-size: 20vw;
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="header">
+  <div class="title" id="title">Doctor</div>
+  <div class="appointment" id="appointment"> Appointment</div>
+</div>
+
+<div class="content">
+  <h2> - Meet Our Doctors - </h2>
+  <div class="content-container">
+    <div class="ui-card">
+      <img src="doct-1.jpg" alt="Doctor 1">
+      <div class="description">
+        <h3>Name: SARANYA</h3>
+        <p>Specialization: Cardiologist</p><br>
+        <p>Location: Bengaluru,Apollo Spectra Hospitals</p><br>
+        <p>Fee: 800/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="doctor-2.jpg" alt="Doctor 2">
+      <div class="description">
+        <h3>Name: RAGHAV CHADDA</h3>
+        <p>Specialization: Neurologist</p><br>
+        <p>Location: Bengaluru,AAROGYA HASTHA HOSPITALS</p><br>
+        <p>Fee: 1650/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="tinywow_doct-3_56331590.jpg" alt="Doctor 3">
+      <div class="description">
+        <h3>Name: VARSHINI</h3>
+        <p>Specialization: Dermatologist</p><br>
+        <p>Location: Bengaluru,Belenus Champion Hospital</p><br>
+        <p>Fee: 700/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="tinywow_doct-3_56329828.png" alt="Doctor 4">
+      <div class="description">
+        <h3>Name: MICHAEL SMITH</h3>
+        <p>Specialization: Orthopedic</p><br>
+        <p>Location: Bengaluru,E CITY HOSPITALS</p><br>
+        <p>Fee: 800/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="doct-5.png" alt="Doctor 5">
+      <div class="description">
+        <h3>Name: ALICE WILLIAMS</h3>
+        <p>Specialization: Pediatrician</p><br>
+        <p>Location: Bengaluru,Medwell Multi-specialty Hospital And Diagnosis Centre</p><br>
+        <p>Fee: 1500/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="tinywow_doct-6_56330415.jpg" alt="Doctor 6">
+      <div class="description">
+        <h3>Name: SMRITHI</h3>
+        <p>Specialization: Gynecologist</p><br>
+        <p>Location: Bengaluru,KVM MULTI SPECIALITY HOSPITAL</p><br>
+        <p>Fee: 950/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="doct-7.jpg" alt="Doctor 7">
+      <div class="description">
+        <h3>Name: MARCUS</h3>
+        <p>Specialization: Surgeon</p><br>
+        <p>Location: Bengaluru,Shree Hospital</p><br>
+        <p>Fee: 1500/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="doct-8.jpg" alt="Doctor 8">
+      <div class="description">
+        <h3>Name: NAVDEEP</h3>
+        <p>Specialization: Dentist</p><br>
+        <p>Location: Bengaluru,Ayu Health Hospitals</p><br>
+        <p>Fee: 900/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+    <div class="ui-card">
+      <img src="doct-9.jpg" alt="Doctor 9">
+      <div class="description">
+        <h3>Name: PRAVALIKA</h3>
+        <p>Specialization: General Physician</p><br>
+        <p>Location: Bengaluru,Sunlife Hospital</p><br>
+        <p>Fee: 450/-</p><br>
+        <a href="calendar.html">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

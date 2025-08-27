@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <html>
+    <head>
+    
+    <meta http-equiv="content-type">
+    <link rel="stylesheet" href="mapliststyle.css">
+    <title>Hospital</title>
+    </head>
+    <body>
+    <div class="twoparts">
+        <div class="container">
+            <div class="containerhead">
+                <label for="Search" class="label1">Choose a Hospital</label>
+                    <form action="" class="searchbar">
+                    <input type="text" id="myinput" placeholder="Search Nearby Hospitals....." onkeyup="searchFun()">
+                    </form>
+                <label for="mention" class="label2">Nearby Hospitals</label>
+            </div>
+    <table  id="mytable">
+    <tr onclick=window.location='confirmation.html';><td class='hfn'>Amrita Charitable Hospital<td><td>0</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>AAROGYA HASTHA HOSPITALS<td><td>3</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Pralaksha Hospital<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Medwell Multi-specialty Hospital<td><td>2</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Kauvery Hospital Electronic City<td><td>1</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Sunlife Hospital<td><td>3</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Hamilton Bailey Hospital<td><td>0</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Belenus Champion Hospital<td><td>2</td></tr>
+    </table>
+    <div class="button">
+        <a type="button" onclick=window.location='confirmation.html' class="btn">BOOK AMBULANCE</a>
+    </div>    
+        </div>
+        
+        </iframe>
+        </div>
+
+        </div>
+        <script>
+            const searchFun = () => {
+                let filter = document.getElementById('myinput').value.toUpperCase();
+
+                let myTable = document.getElementById('mytable');
+
+                let tr = myTable.getElementsByTagName('tr');
+
+                for (var i = 0; i < tr.length; i++) {
+                    let td = tr[i].getElementsByTagName('td')[0];
+
+                    if (td) {
+                        let textvalue = td.textContent || td.innerHTML;
+
+                        if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        }
+                        else 
+                        {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            </script>
+            <script>
+             $("tr").click
+             (
+             window.location = "confirmation.html"
+             );
+            </script>
+    </body>
+    </html>
+    

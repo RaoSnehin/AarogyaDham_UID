@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#">
+            <h1>Create Account</h1>
+            <input type="text" placeholder="Name" id="name"/>
+            <input type="email" placeholder="Email" id="email"/>
+            <input type="password" placeholder="Password" id="password"/>
+            <button type="button" onclick="SignUp()">Sign Up</button>
+            <p id="signup-message"></p>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1 class="login">Log in</h1>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" id="lname"/>
+            <input type="password" placeholder="Password" id="lpassword"/>
+            <button type="button" id="nextPageButton" onclick="Login()">Log In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Already Have An Account</h1>
+                <p>To continue with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Log In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>New To This App</h1>
+                <p>Enter your details and start your journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+   
+            
+    
+
+    
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+
+
+
+let signUpEmail = '';
+let signUpPassword = '';
+let validLogin = false; 
+
+function SignUp(){
+    var name = document.getElementById("name").value;
+    signUpEmail = document.getElementById("email").value;
+    signUpPassword = document.getElementById("password").value;
+    fetch(`http://127.0.0.1:8000/register/name=${name}&email=${signUpEmail}&password=${signUpPassword}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("signup-message").textContent = "Signed up successfully!";
+            document.getElementById("signup-message").style.color = "green";
+            validLogin = true; 
+            window.location.href = 'http://127.0.0.1:5500/HomeNew.html';
+        })
+        .catch(error => {
+            validLogin = false; 
+            console.error('Error:', error);
+        });
+}
+
+function Login(){
+    var email = document.getElementById("lname").value;
+    var password = document.getElementById("lpassword").value;
+    if (email === signUpEmail && password === signUpPassword) {
+		document.getElementById('nextPageButton').addEventListener('click', function() {
+        window.location.href = 'http://127.0.0.1:5500/HomeNew.html';  
+    });
+
+            
+    } else {
+        validLogin = false; 
+        alert("Email or password is incorrect!");
+    }
+}
+
+
+
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+
+    
+</script>
+</body>
+</html>

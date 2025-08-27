@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
+
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: RED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden; 
+  }
+  
+
+  .parallax-text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12vw;
+    font-style: italic;
+    top: 50%; 
+    transform: translateY(-50%); 
+    white-space: nowrap; 
+  }
+
+  .parallax-text::after {
+    content: attr(text);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.15vw black;
+  }
+
+  img {
+    width: 66vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    animation: ambulanceAnimation 8s linear infinite; 
+  }
+
+  .parallax-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: textAnimation 8s linear infinite; 
+  }
+
+  @keyframes ambulanceAnimation {
+    0% {
+      right: -100%; 
+    }
+    100% {
+      right: 100%; 
+    }
+  }
+
+  @keyframes textAnimation {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<span class="parallax-text" >
+  <span>E</span><span>M</span><span>E</span><span>R</span><span>G</span><span>E</span><span>N</span><span>C</span><span>Y</span>
+</span>
+
+<img src="ambulance-ad-removebg-preview.png" alt="Ambulance">
+
+</body>
+</html>

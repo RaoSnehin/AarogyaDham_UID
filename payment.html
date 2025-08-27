@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="payment.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form id="paymentForm" action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Address</h3>
+
+                <div class="inputBox">
+                    <span>Full Name :</span>
+                    <input type="text" placeholder="Enter full name">
+                </div>
+                <div class="inputBox">
+                    <span>Email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Address :</span>
+                    <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>City :</span>
+                    <input type="text" placeholder="eg: Bangalore">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>State :</span>
+                        <input type="text" placeholder="eg: Karnataka">
+                    </div>
+                    <div class="inputBox">
+                        <span>Zip Code :</span>
+                        <input type="text" placeholder="eg: 123456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Payment</h3>
+
+                <div class="inputBox">
+                    <span>Cards Accepted :</span>
+                    <img src="cards.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Name on Card :</span>
+                    <input type="text" placeholder="Enter name on the card">
+                </div>
+                <div class="inputBox">
+                    <span>Credit Card Number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Exp Month :</span>
+                    <input type="text" placeholder="MM">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Exp Year :</span>
+                        <input type="number" placeholder="YYYY">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="password" placeholder="Enter CVV">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+        <button type="button" class="submit-btn" onclick="confirmPayment()">Confirm Payment</button>
+    </form>
+
+</div>    
+
+<script>
+    function confirmPayment() {
+        alert('Payment is completed');
+        
+        window.location.href = 'success1.html';
+    }
+</script>
+
+</body>
+</html>

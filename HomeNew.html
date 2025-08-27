@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arogya Dham </title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="HomeNew.css">
+	
+
+
+</head>
+<body>
+    
+
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="logo-removebg-preview.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">aboutUs</a>
+		<a href="#ourservices">Our Services</a>
+        
+        <a href="login/contact.html">contact</a>
+        <a href="index1.html">Feedback</a>
+    </nav>
+
+    <div class="icons">
+        <div class="" id="search-btn"></div>
+        <div class="" id="cart-btn"></div>
+        <div class="" id="menu-btn"></div>
+    </div>
+
+
+
+
+</header>
+
+
+<section class="home" id="home">
+    <div class="content">
+        <h3>Arogya Dham</h3>
+        <p>Arogyam Param Dhanam</p>
+       
+    </div>
+</section>
+
+
+<section class="about" id="ourservices">
+	<h1 class="heading"><span>Our</span> Services</h1>
+	<div class="row">
+		<div class="container">
+            <a href="organdonation.html"> <div class="img-1"></div> </a>
+             <a href="doctorappointment3.html"><div class="img-2"></div> </a>
+             <a href="medicine.html"><div class="img-3"></div> </a>
+             <a href="frame.html"><div class="main-img"></div> </a>
+             
+         </div>
+	</div>
+</section>
+
+<section class="about" id="about">
+	<h1 class="heading"><span>about</span> us</h1>
+	<div class="row">
+		<div class="image">
+			<img src="logo-removebg-preview.png" alt="">
+            
+		</div>
+		<div class="content">
+			 <p>Arogyadham simplifies managing your health with its user-friendly website.  Get essential medications delivered straight to your door, find opportunities to give blood or organs and potentially help others in need, and connect with doctors for urgent consultations or routine appointments – all from the comfort of your home. Arogyadham empowers you to take charge of your health and well-being.</p>
+			 <a href="aboutus.html" class="btn">learn more</a>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+<section class="footer">
+
+	<div class="share">
+			<a href="https://www.facebook.com/your-profile" class="fab fa-facebook-f"></a>
+			<a href="https://twitter.com/your-profile" class="fab fa-twitter"></a>
+			<a href="https://www.instagram.com/your-profile" class="fab fa-instagram"></a>
+			<a href="https://www.linkedin.com/in/your-profile" class="fab fa-linkedin"></a>
+			
+	</div>
+
+	<div class="links">
+			<a href="#home">home</a>
+			<a href="#about">about</a>
+			
+			<a href="#ourservices">ourservises</a>
+			<a href="#blogs">feedback</a>
+	</div>
+	
+</section>
+
+
+
+   
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	let navbar = document.querySelector('.navbar');
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const text = document.querySelector('.home .content h3');
+    const letters = text.textContent.split('');
+    text.innerHTML = '';
+
+    letters.forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.textContent = letter;
+        text.appendChild(span);
+    });
+});
+
+
+</script>
+
+</body>
+</html>

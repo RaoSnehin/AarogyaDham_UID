@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastLance</title>
+    <link rel="icon" type="image/png" href="images/site-logo_2.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="aside">
+         <div class="logo">
+             <span><img class="site-logo" src="login/istockphoto-1209130995-612x612.jpg" alt="loading..."/></span>
+         </div>
+         <div class="nav-toggler">
+             <span></span>
+         </div>
+         <ul class="nav">
+             <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+             
+      </div>
+
+      <section class="home active section" id="home">
+
+              <div class="container">
+
+                  <div class="home-info">
+                    <h3 class="intro">Ambulances are the lifelines that rush hope
+                      
+                      <h3 class="my-profession"><span class="typing"></span></h3>
+                               <p>
+                                   <ul class="home-content">
+                                    <li>24/7 emergency & medical transportation support.</li>
+                                    <li>Ensuring professional medical care throughout the medical transport journey.
+                                    </li>
+                                  </ul>
+                              </p>
+                              <br>
+                              <a type="button" class="btn" id="nextPageButton" onclick="genMap();">BOOK AMBULANCE</a>
+                               
+                  </div>
+              </div>
+              <img class="home-img" src="images\ambulancesite.jpg" alt="">
+          </section>
+
+              
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script>
+       document.getElementById('nextPageButton').addEventListener('click', function() {
+    window.location.href = 'info.html';  
+});
+
+    </script>
+  </body>
+</html> 

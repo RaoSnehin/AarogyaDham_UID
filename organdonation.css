@@ -1,0 +1,138 @@
+.primary-header__logo {
+    display: block;
+    width: 200px; 
+    height: auto; 
+ 
+    text-decoration: none; 
+}
+
+
+
+.pic{
+    background-image:url(Organ-donation-Myths-vs-Facts-1200x800.png);
+    width:100%;
+    height:300px;
+    font-size:30px;
+    color:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+   
+}
+
+b{
+    font-size:30px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  font-family: Lato, sans-serif;
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 300px;
+  background-color:lightsalmon;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  padding: 24px 16px;
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+
+
+.social-links {
+  width: 100%;
+  display: flex;
+  height: 0;
+  border-top: 1px solid black;
+  transition: height 0.3s ease;
+}
+.card:hover .social-links {
+  height: 65px;
+}
+
+
+.social-links .climate {
+  --color: green;
+}
+
+.social-links .climat {
+    --color: red;
+  }
+
+
+.social-links > a {
+  font-size: 20px;
+  padding-block: 20px;
+ 
+  flex: 1;
+}
+
+.social-links > a:not(:last-child) {
+  border-right: 1px solid #cfcfcf;
+}
+.social-links > a:hover {
+  background-color: var(--color);
+}
+.social-links > a:hover > i {
+  color: white;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
